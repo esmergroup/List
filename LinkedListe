@@ -1,0 +1,35 @@
+import java.util.LinkedList;
+
+public class LinkedListe {
+	
+	public static void main(String[] args) {
+		
+		// Erzeugen der LinkedList
+		LinkedList<String> meineListe = new LinkedList<String>();
+		
+		// Einfügen eines Elementes
+		meineListe.add("Timbo");
+		meineListe.add("Jimbo");
+		meineListe.addLast("Bimbo");
+		meineListe.addFirst("ToolTime");
+		meineListe.add(3, "HomeImprovement");
+		
+		// Ausgabe der Liste
+		System.out.println(meineListe);
+		
+		// Ausgabe des ersten Elements
+		System.out.println("Das erste Element: "+meineListe.getFirst());
+		
+		// Ausgabe des letzten Elements
+		System.out.println("Das lezte Element: "+meineListe.getLast());
+		
+		// Ausgabe des vierten Elements
+		System.out.println("Das vierte Element: "+meineListe.get(3));
+		
+		// Einfügen eines Elements mit dem Index zwei
+		meineListe.set(2, "AL BoreLand");
+		
+		// NeueListe ausgeben
+		System.out.println(meineListe);	
+	}
+}
