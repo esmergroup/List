@@ -1,0 +1,64 @@
+import java.text.DecimalFormat;
+import java.util.ArrayList;
+
+public class ArrayListKlasse {
+	
+	public static void main(String[] args) {
+		
+		//ArrayList definieren bzw. Objet ArrayList erzeugen.
+		
+		ArrayList<String> schueler = new ArrayList<String>();
+		
+		//Einfügen der Schüler 
+		
+		schueler.add(0,"PAUL");
+		schueler.add(1,"JULIAN");
+		schueler.add(2,"TONI");
+		schueler.add(3,"SUSANNE");
+		schueler.add(4,"MONIKA");
+		schueler.add(5,"MONETTE");
+		System.out.println(schueler);
+		// Name des dritten elements mit dem Index 2 ändern auf Antoni...
+		
+		schueler.set(2, "ANTONI");
+		System.out.println(schueler);
+		
+		
+		// Noten der Schueler
+		
+		ArrayList<Integer> noten = new ArrayList<Integer>();
+		
+		// einfügen der Noten
+		
+		noten.add(0, 1);
+		noten.add(1, 3);
+		noten.add(2, 2);
+		noten.add(3, 4);
+		noten.add(4, 4);
+		noten.add(5, 2);
+		System.out.println();
+		// Noten an die Schüler zuweisen...
+		
+		for (int i = 0; i < schueler.size() ; i++) {
+			System.out.println(schueler.get(i)+" hat die Note "+noten.get(i));
+		}
+		
+		//Korrektur
+		noten.set(3, 3);
+		noten.set(4, 3);
+		System.out.println();
+		for (int j = 0; j < schueler.size() ; j++) {
+			System.out.println(schueler.get(j)+" hat die Note "+noten.get(j));
+		}
+		
+		// Klassendurchschnitt berechnen
+		
+		double notensumme = ( noten.get(0) + noten.get(1) + noten.get(2) + noten.get(3) + noten.get(4) + noten.get(5) );
+		double notendurchschnitt = notensumme / (noten.size());
+		
+		DecimalFormat f = new DecimalFormat("#0.00");
+		
+		System.out.println(f.format(notendurchschnitt));
+		
+	}
+}
