@@ -1,0 +1,59 @@
+import java.util.ArrayList;
+public class ArrayListe {
+	public static void main(String[] args) {
+		
+		// Erzeugung des Objektes
+		ArrayList<String> liste = new ArrayList<String>();
+		
+		// Einfügen der Elemente in die Liste
+		liste.add(0, "MaulPferd");
+		liste.add(1, "AmeisenScheisse");
+		liste.add(2, "AutoKlasse");
+		liste.add(3, "SchokoladeToblerone");
+		liste.add(4, "EselsBrücke");
+		
+		// Ausgabe der Liste
+		System.out.println(liste);
+		
+		// Ausgabe der Listenelement mit einem bestimmten index
+		System.out.println("Das 1. Element : "+liste.get(0) + "\nDas 4. Element : "+liste.get(3));
+		
+		// Aendern der Elemente mit dem Index 2 und 3
+		liste.set(2, "SchulKlasse");
+		liste.set(3, "SchokoladeMilka");
+		
+		// Ausgabe der Liste nach dem Aendern
+		System.out.println(liste);
+		
+		// Groesse der Liste ausgeben
+		System.out.println("Die Anzahl der Elemente in der Liste: "+liste.size());
+		
+		// Prüfen ob das Objekt enthalten ist.
+		if(liste.contains("MaulPferd") == true) {
+			System.out.println("Das Element MaulPferd ist in der Liste");
+		}
+		else if(liste.contains("MaulPferd") == false) {
+			System.out.println("Das Element MaulPferd ist nicht in der Liste");
+		}
+		if(liste.contains("Makeroni") == true) {
+			System.out.println("Das Element Makeroni ist in der Liste");
+		}
+		else if(liste.contains("Makeroni") == false) {
+			System.out.println("Das Element Makeroni ist nicht in der Liste");
+		}
+		else{
+			System.out.println("Ungueltige Eingabe");
+		}
+		
+		// Entfernen eines Elementes
+		liste.remove(0);
+		System.out.println("Der 0-te Element wurde entfernt");
+		
+		// Liste nach dem Entfernen
+		System.out.println("Die Groesse der Liste lautet: "+liste.size());
+		
+		// Index eines Objektes Liefern
+		int listenZahl = liste.indexOf("SchulKlasse");
+		System.out.println("Der Index des Elements "+liste.get(listenZahl)+" lautet: "+liste.indexOf("SchulKlasse"));
+	}
+}
